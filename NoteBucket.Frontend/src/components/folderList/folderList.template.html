@@ -1,0 +1,16 @@
+
+<div>
+    <div *ngIf="showLoadingIndicator" class="overlay">
+        <loading-indicator></loading-indicator>
+    </div>
+
+    <div *ngFor="let folder of folders" class="folderList-item">
+        <div class="folderList-folderHeader header-bar"><i class="material-icons">folder</i> {{folder.name}}</div>
+
+        <table>
+            <tr *ngFor="let note of folder.notes" (click)="onSelectNote(note)" [class.selected]="note === selectedNote">
+                <td>{{note.title}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+<div *ngIf="note != null" class="form-panel">
+    <div class="note-detail-header header-bar form-panel-header">
+        <i class="material-icons">short_text</i> 
+        <span>{{note.title}}</span>
+    </div>
+    
+    <div class="form-panel-content">
+        <div *ngIf="showSavingIndicator" class="overlay">
+            <loading-indicator></loading-indicator>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" #f="ngForm">
+            <div class="input-row">
+                <div class="input-label">
+                    <label for="note-title">Title</label>
+                </div>
+
+                <div class="input-field">
+                    <input type="text" id="note-title" name="title" [(ngModel)]="note.title" #title="ngModel" required>
+                </div>
+
+                <div class="input-hint">
+                    <span *ngIf="title.touched && !title.valid">
+                        <i class="material-icons">error</i> Please add a title for your note.
+                    </span>
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-label">
+                    <label for="note-body">Body</label>
+                </div>
+
+                <div class="input-field">
+                    <textarea id="note-body" name="body" [(ngModel)]="note.body" #body="ngModel"></textarea>
+                </div>
+
+                <div class="input-hint">
+                </div>
+            </div>
+
+            <div class="input-row">
+                <div class="input-label">
+                </div>
+
+                <div class="input-field">
+                    <button type="submit" [disabled]="!f.valid">Save</button>
+                </div>
+
+                <div class="input-hint">
+                </div>
+            </div>
+
+            <div *ngIf="saved" class="notifier-success icon-text-container">
+                <i class="material-icons">check_circle</i> Note has been updated successfully.
+            </div>
+        
+        </form>
+    </div>
+</div>

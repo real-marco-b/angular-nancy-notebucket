@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0132DE43-CFB4-40FB-B433-13CBB60D609A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NoteBucket.Backend.Api.Impl</RootNamespace>
+    <AssemblyName>NoteBucket.Backend.Api.Impl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\artifacts\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuthenticationService.cs" />
+    <Compile Include="DemoDataService.cs" />
+    <Compile Include="FolderService.cs" />
+    <Compile Include="NoteService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NoteBucket.Backend.Api.Contracts\NoteBucket.Backend.Api.Contracts.csproj">
+      <Project>{f6792a40-7641-44d5-9169-369c856e9670}</Project>
+      <Name>NoteBucket.Backend.Api.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Base\NoteBucket.Backend.Base.csproj">
+      <Project>{c9ebc0c2-750e-4e37-8cfb-585d69a15767}</Project>
+      <Name>NoteBucket.Backend.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Domain\NoteBucket.Backend.Domain.csproj">
+      <Project>{31b358d1-7dea-4c42-92ec-a6b0dd24feac}</Project>
+      <Name>NoteBucket.Backend.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Persistence.Contracts\NoteBucket.Backend.Persistence.Contracts.csproj">
+      <Project>{a17b8cb2-48d1-4c3e-9788-5c4f3ddcb506}</Project>
+      <Name>NoteBucket.Backend.Persistence.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Persistence.Impl\NoteBucket.Backend.Persistence.Impl.csproj">
+      <Project>{7c27addc-e53e-4f81-a21f-d635a2370da4}</Project>
+      <Name>NoteBucket.Backend.Persistence.Impl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

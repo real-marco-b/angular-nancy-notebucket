@@ -1,0 +1,47 @@
+﻿<div class="form-panel-content" style="width:60% !important">
+    <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div class="input-row">
+            <div class="input-label">
+                <label for="username">E-Mail</label>
+            </div>
+
+            <div class="input-field">
+                <input type="text" id="username" name="username" [(ngModel)]="credentials.username" #username="ngModel" required>
+            </div>
+
+            <div class="input-hint">
+                <span *ngIf="username.touched && !username.valid">
+                    <i class="material-icons">error</i> Please enter your e-mail address.
+                </span>
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-label">
+                <label for="password">Password</label>
+            </div>
+
+            <div class="input-field">
+                <input type="password" id="password" name="password" [(ngModel)]="credentials.password" #passwd="ngModel" required>
+            </div>
+
+            <div class="input-hint">
+                <span *ngIf="passwd.touched && !passwd.valid">
+                    <i class="material-icons">error</i> Please enter your password.
+                </span>
+            </div>
+        </div>
+
+        <div class="input-row">
+            <div class="input-label">
+            </div>
+
+            <div class="input-field">
+                <button type="submit" [disabled]="!f.valid">Sign In</button>
+            </div>
+
+            <div class="input-hint">
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,139 @@
+.content-pane {
+    margin-left:20px;
+    padding:30px 10px 10px 10px;
+    vertical-align: top !important;
+}
+
+.menu-pane {
+    background-color:#333;
+    color:#fff;
+    vertical-align:top !important;
+    font-size:15px;
+    height:100vh;
+    margin:0;
+    padding:0;
+}
+
+/****************************
+* MENU ITEM
+****************************/
+
+.route-active {
+    background-color:#555 !important;
+    color:white !important;
+}
+
+.menu-item i {
+    letter-spacing: 10px !important;
+    vertical-align: middle !important;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color:#fff;
+}
+
+.menu-item a:visited {
+    color:#fff;
+}
+
+.menu-item a:active {
+    color:#fff;
+}
+
+.menu-item > div {
+    padding:10px 10px 12px 14px;
+    vertical-align: middle;
+}
+
+/****************************
+* HEADER
+****************************/
+
+.header {
+    padding: 14px 10px 14px 10px;
+    background-color:#fde9d4;
+    color:#404040;
+    font-family:'Raleway-Light';
+    font-size:33px;
+}
+
+.header > span {
+    padding-left:20px;
+}
+
+/****************************
+* DETAIL FORM
+****************************/
+
+.form-panel {
+    box-shadow:0 0 4px #999;
+    background-color:#f9f9f9;
+    width:80%;
+}
+
+.form-panel-content {
+    padding:20px;
+}
+
+form .input-hint {
+    padding: 9px 0 0 28px !important;
+}
+
+form .input-hint > span {
+    color:#c00000;
+}
+
+form .input-hint i {
+    position:absolute;
+    top:5px;
+    left:0;
+}
+
+form button[type=submit] {
+    background-color:#887c6e !important;
+    color:#fff;
+}
+
+/****************************
+* FOLDER LIST
+****************************/
+
+.folderList-item table {
+    border-collapse: collapse;
+    border-width:0;
+    width:100%;
+}
+
+.folderList-item tr:nth-child(odd) {
+    padding:10px;
+    background-color:#f9f9f9;
+}
+
+.folderList-item tr:nth-child(even) {
+    padding:10px;
+    background-color:#eaeaea;
+}
+
+.folderList-item tr.selected {
+    background-color:#887c6e !important;
+    color:#fff;
+}
+
+.folderList-item {
+    box-shadow:0 0 4px #999;
+    margin-bottom:30px;
+}
+
+/****************************
+* NOTIFIER
+****************************/
+
+.notifier-success {
+    margin-top:20px;
+    background-color:#f0f0f0;
+}
+
+.notifier-success > i {
+    color:#887c6e;
+}

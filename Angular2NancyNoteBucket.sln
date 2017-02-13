@@ -1,0 +1,77 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Application", "NoteBucket.Backend.Application\NoteBucket.Backend.Application.csproj", "{E83AA836-BAFF-4B2D-B4FF-C9930BE184F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Api.Contracts", "NoteBucket.Backend.Api.Contracts\NoteBucket.Backend.Api.Contracts.csproj", "{F6792A40-7641-44D5-9169-369C856E9670}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Api.Impl", "NoteBucket.Backend.Api.Impl\NoteBucket.Backend.Api.Impl.csproj", "{0132DE43-CFB4-40FB-B433-13CBB60D609A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Domain", "NoteBucket.Backend.Domain\NoteBucket.Backend.Domain.csproj", "{31B358D1-7DEA-4C42-92EC-A6B0DD24FEAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Persistence.Contracts", "NoteBucket.Backend.Persistence.Contracts\NoteBucket.Backend.Persistence.Contracts.csproj", "{A17B8CB2-48D1-4C3E-9788-5C4F3DDCB506}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Persistence.Impl", "NoteBucket.Backend.Persistence.Impl\NoteBucket.Backend.Persistence.Impl.csproj", "{7C27ADDC-E53E-4F81-A21F-D635A2370DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.HostApplication", "NoteBucket.Backend.HostApplication\NoteBucket.Backend.HostApplication.csproj", "{EEA1F04A-4164-41C6-B125-DF94282E63CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Base", "NoteBucket.Backend.Base\NoteBucket.Backend.Base.csproj", "{C9EBC0C2-750E-4E37-8CFB-585D69A15767}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{35242B9F-2B4C-4D34-974A-720CE3F7987D}"
+	ProjectSection(SolutionItems) = preProject
+		build-db.cmd = build-db.cmd
+		build-db.mono = build-db.mono
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoteBucket.Backend.Tests", "NoteBucket.Backend.Tests\NoteBucket.Backend.Tests.csproj", "{0D1190D2-9DCD-47D4-9954-8E0696707591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E83AA836-BAFF-4B2D-B4FF-C9930BE184F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E83AA836-BAFF-4B2D-B4FF-C9930BE184F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E83AA836-BAFF-4B2D-B4FF-C9930BE184F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E83AA836-BAFF-4B2D-B4FF-C9930BE184F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6792A40-7641-44D5-9169-369C856E9670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6792A40-7641-44D5-9169-369C856E9670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6792A40-7641-44D5-9169-369C856E9670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6792A40-7641-44D5-9169-369C856E9670}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0132DE43-CFB4-40FB-B433-13CBB60D609A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0132DE43-CFB4-40FB-B433-13CBB60D609A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0132DE43-CFB4-40FB-B433-13CBB60D609A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0132DE43-CFB4-40FB-B433-13CBB60D609A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31B358D1-7DEA-4C42-92EC-A6B0DD24FEAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31B358D1-7DEA-4C42-92EC-A6B0DD24FEAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31B358D1-7DEA-4C42-92EC-A6B0DD24FEAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31B358D1-7DEA-4C42-92EC-A6B0DD24FEAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A17B8CB2-48D1-4C3E-9788-5C4F3DDCB506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A17B8CB2-48D1-4C3E-9788-5C4F3DDCB506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A17B8CB2-48D1-4C3E-9788-5C4F3DDCB506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A17B8CB2-48D1-4C3E-9788-5C4F3DDCB506}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C27ADDC-E53E-4F81-A21F-D635A2370DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C27ADDC-E53E-4F81-A21F-D635A2370DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C27ADDC-E53E-4F81-A21F-D635A2370DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C27ADDC-E53E-4F81-A21F-D635A2370DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEA1F04A-4164-41C6-B125-DF94282E63CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEA1F04A-4164-41C6-B125-DF94282E63CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEA1F04A-4164-41C6-B125-DF94282E63CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEA1F04A-4164-41C6-B125-DF94282E63CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9EBC0C2-750E-4E37-8CFB-585D69A15767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9EBC0C2-750E-4E37-8CFB-585D69A15767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9EBC0C2-750E-4E37-8CFB-585D69A15767}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9EBC0C2-750E-4E37-8CFB-585D69A15767}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D1190D2-9DCD-47D4-9954-8E0696707591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D1190D2-9DCD-47D4-9954-8E0696707591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D1190D2-9DCD-47D4-9954-8E0696707591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D1190D2-9DCD-47D4-9954-8E0696707591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

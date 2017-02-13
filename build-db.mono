@@ -1,0 +1,1 @@
+mono ./packages/FluentMigrator.1.6.2/tools/Migrate.exe /connection "Data Source=./notebucket-database.db;Version=3;" /db SQLite /target artifacts/NoteBucket.Backend.Persistence.Impl.dll

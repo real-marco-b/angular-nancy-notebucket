@@ -1,0 +1,17 @@
+<header>
+  <img src="assets/notestack.svg" height="96" alt="">
+</header>
+
+<split-layout>
+  <div *ngIf="auth.loggedIn" class="split-layout-left menu-pane">
+    <app-menu>
+      <menu-item><div routerLinkActive="route-active"><a routerLink="/dashboard"><i class="material-icons">notifications</i> Dashboard</a></div></menu-item>
+      <menu-item><div routerLinkActive="route-active"><a routerLink="/notes"><i class="material-icons">subject</i> My Notes</a></div></menu-item>
+      <menu-item><div routerLinkActive="route-active"><a routerLink="/logout"><i class="material-icons">info</i> Log Out</a></div></menu-item>
+    </app-menu>
+  </div>
+
+  <div class="split-layout-right content-pane">
+      <router-outlet></router-outlet>
+  </div>
+</split-layout>

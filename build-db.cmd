@@ -1,0 +1,2 @@
+del ".\artifacts\notebucket-database.db"
+packages\FluentMigrator.1.6.2\tools\Migrate /connection "Data Source=./artifacts/notebucket-database.db;Version=3;" /db SQLite /target artifacts/NoteBucket.Backend.Persistence.Impl.dll

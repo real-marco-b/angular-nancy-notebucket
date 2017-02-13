@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E83AA836-BAFF-4B2D-B4FF-C9930BE184F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NoteBucket.Backend.Application</RootNamespace>
+    <AssemblyName>NoteBucket.Backend.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\artifacts\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.3.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JWT, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JWT.1.3.4\lib\3.5\JWT.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy, Version=1.4.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.1.4.3\lib\net40\Nancy.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Authentication.Stateless, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Authentication.Stateless.1.4.1\lib\net40\Nancy.Authentication.Stateless.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nancy.Bootstrappers.Autofac, Version=1.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nancy.Bootstrappers.Autofac.1.4.1\lib\net40\Nancy.Bootstrappers.Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="DataTransferModels\Credentials.cs" />
+    <Compile Include="DataTransferModels\NoteDto.cs" />
+    <Compile Include="Modules\AuthenticationModule.cs" />
+    <Compile Include="Modules\DemoDataModule.cs" />
+    <Compile Include="Modules\FolderModule.cs" />
+    <Compile Include="Modules\IndexModule.cs" />
+    <Compile Include="Modules\NoteModule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\AuthenticationContext.cs" />
+    <Compile Include="Security\IAuthenticationContext.cs" />
+    <Compile Include="Security\Tokens\ITokenGenerator.cs" />
+    <Compile Include="Security\Tokens\ITokenHandler.cs" />
+    <Compile Include="Security\Tokens\JwtTokenGenerator.cs" />
+    <Compile Include="Security\Tokens\JwtTokenHandler.cs" />
+    <Compile Include="Security\UserIdentity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NoteBucket.Backend.Api.Contracts\NoteBucket.Backend.Api.Contracts.csproj">
+      <Project>{f6792a40-7641-44d5-9169-369c856e9670}</Project>
+      <Name>NoteBucket.Backend.Api.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Api.Impl\NoteBucket.Backend.Api.Impl.csproj">
+      <Project>{0132de43-cfb4-40fb-b433-13cbb60d609a}</Project>
+      <Name>NoteBucket.Backend.Api.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Base\NoteBucket.Backend.Base.csproj">
+      <Project>{c9ebc0c2-750e-4e37-8cfb-585d69a15767}</Project>
+      <Name>NoteBucket.Backend.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Domain\NoteBucket.Backend.Domain.csproj">
+      <Project>{31b358d1-7dea-4c42-92ec-a6b0dd24feac}</Project>
+      <Name>NoteBucket.Backend.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Persistence.Contracts\NoteBucket.Backend.Persistence.Contracts.csproj">
+      <Project>{a17b8cb2-48d1-4c3e-9788-5c4f3ddcb506}</Project>
+      <Name>NoteBucket.Backend.Persistence.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NoteBucket.Backend.Persistence.Impl\NoteBucket.Backend.Persistence.Impl.csproj">
+      <Project>{7c27addc-e53e-4f81-a21f-d635a2370da4}</Project>
+      <Name>NoteBucket.Backend.Persistence.Impl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

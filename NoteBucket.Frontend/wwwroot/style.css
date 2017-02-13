@@ -1,0 +1,276 @@
+@font-face {
+    font-family:'Raleway-Light';
+    src: url('fonts/Raleway-Light.ttf') format("truetype");
+}
+@font-face {
+    font-family:'Raleway';
+    src: url('fonts/Raleway-Regular.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url('fonts/MaterialIcons-Regular.woff2') format('woff2'),
+       url('fonts/MaterialIcons-Regular.woff') format('woff'),
+       url('fonts/MaterialIcons-Regular.ttf') format('truetype');
+}
+
+/************************************************
+* General Styling
+*************************************************/
+
+body {
+    font-family: 'Raleway';
+    font-size: 15px;
+    margin:0;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.icon-text-container {
+    position:relative;
+    padding:9px 0 8px 34px !important;
+}
+
+.icon-text-container i {
+    position:absolute;
+    top:5px;
+    left:4px;
+}
+
+/************************************************
+* Split Layout Styling
+*************************************************/
+
+.split-layout-container {
+    width:100%;
+    display:table;
+    border-collapse: collapse;
+}
+
+.split-layout-fixed {
+    vertical-align:top !important;
+    width:10%;
+    white-space: nowrap;
+    display:table-cell;
+    padding:0 !important;
+}
+
+.split-layout-dynamic {
+    display:table-cell;
+    width:auto;
+}
+
+*html .split-layout-fixed {float:left;}
+
+/************************************************
+* Master Detail Styling
+*************************************************/
+
+.master-detail {
+    display:table;
+    width:100%;
+}
+
+.master-detail-left {
+    display:table-cell;
+    width:20%;
+    vertical-align: top !important;
+}
+
+.master-detail-right {
+    padding-left:40px;
+    display:table-cell;
+    width:75%;
+    vertical-align: top !important;
+}
+
+
+/************************************************
+* Header Bar Styling
+*************************************************/
+
+.header-bar {
+    font-size:16px;
+    color:#000;
+    background-color:#d0d0d0;
+    width:100%;
+    vertical-align: middle;
+}
+
+.header-bar i {
+    letter-spacing: 10px !important;
+    vertical-align: middle !important;
+}
+
+/************************************************
+* Form Styling
+*************************************************/
+
+form {
+    width:100%;
+    margin-top:20px;
+}
+
+.form-panel-content {
+    position:relative;
+    left:0;
+    top:0;
+}
+
+form .input-row {
+    display:table;
+    width:100%;
+    margin-bottom:20px;
+}
+
+form .input-label {
+    display:table-cell;
+    width:30%;
+}
+
+form input-field {
+    display:table-cell;
+    width:70%;
+}
+
+form input[type=text] {
+    width:100%;
+}
+
+textarea {
+    width:100%;
+}
+
+form input[type=password] {
+    width:100%;
+}
+
+form input[type=number] {
+    width:unset;
+}
+
+form .input-hint {
+    display:block;
+    position:relative;
+}
+
+form .input-option
+{
+    margin-bottom:10px;
+}
+
+form button[type=submit] {
+    display:block;
+    margin-left:auto;
+    margin-right:0;
+    border-radius:5px;
+    border-width: 0;
+    padding:10px;
+}
+
+*:focus {
+    outline:none;
+}
+
+/************************************************
+* Loading Indicator Styling
+*************************************************/
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #333;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+/************************************************
+* Overlay Styling
+*************************************************/
+
+.overlay-container {
+    position:relative;
+    left:0;
+    top:0;
+}
+
+.overlay {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(255, 255, 255, 0.6);
+    z-index:9999;
+}
